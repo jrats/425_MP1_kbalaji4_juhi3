@@ -9,7 +9,7 @@ def send_msg(sock, data):
 
 def recv_exact(sock, n):
     buf = b'' # empty buffer
-    while len() < n:
+    while len(buf) < n:
         chunk = sock.recv(n-len(buf))  # expect to receive remianing bytes of data
         if not chunk:
             raise ConnectionError("socket closed before expected data arrived")

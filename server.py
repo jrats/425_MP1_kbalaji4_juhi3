@@ -11,7 +11,7 @@ PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 def handle_client(conn, addr):
     print(f"connected by {addr}")
     try:
-        data = recv_msg(1024)
+        data = recv_msg(conn)
         pattern = data.decode()
 
         result = subprocess.run(

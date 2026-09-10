@@ -23,7 +23,7 @@ def handle_client(conn, addr):
         if result.returncode == 0:
             output = result.stdout
         elif result.returncode == 1:
-            output = "No matches found."
+            output = ""
         else:
             output = f'grep error: {result.stderr}'
         send_msg(conn, output.encode())

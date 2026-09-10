@@ -28,3 +28,5 @@ dist/
 # Environment files
 .env
 .env.*
+
+.vsls.json
